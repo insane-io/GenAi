@@ -14,7 +14,7 @@ def format_theme(theme):
     return f"theme-{theme}"
 
 def generate_gemini_summary(history_text):
-    genai.configure(api_key="AIzaSyBvMtbKwkTOo3N7Z934TRCCXZL2dSnF5cw")
+    genai.configure(api_key="YOUR_API_KEY")
 
     prompt = (
         f"Summarize the following chat in 3 to 4 words:\n{history_text}"
@@ -34,7 +34,7 @@ def generate_gemini_summary(history_text):
 
 
 def generate_gemini_response(history_text):
-    genai.configure(api_key="AIzaSyBvMtbKwkTOo3N7Z934TRCCXZL2dSnF5cw")
+    genai.configure(api_key="YOUR_API_KEY")
 
     prompt = (
     f"You are an AI providing emotional support and give them advice which will help user to calm him. Below is a chat conversation. "
