@@ -1,0 +1,336 @@
+/* Import Tailwind base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar Styles */
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Track color */
+  border-radius: 10px; /* Round edges */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Thumb color */
+  border-radius: 10px; /* Round edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Thumb color on hover */
+}
+
+/* Root Variables for Default Colors */
+:root {
+  --bg-color: white; /* Default background */
+  /* --text-color: white;  */
+}
+
+/* Tailwind Overrides for Background and Text Color */
+.bg-theme {
+  background-color: var(--bg-color);
+}
+
+.text-theme {
+  color: var(--text-color);
+}
+
+/* General Styles */
+.app-container {
+  transition: background-color 0.5s ease, color 0.5s ease;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+}
+
+/* Card Styles */
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Text Styles */
+.text-primary {
+  transition: color 0.5s ease;
+}
+
+/* Themes */
+
+/* Calm & Tranquil */
+.theme-calm-and-tranquil {
+  background: linear-gradient(180deg, #cfeffd, #a1dbf5);
+  color: #3a3b3c;
+  font-family: 'Georgia', serif;
+}
+
+.theme-calm-and-tranquil button {
+  background-color: #a1dbf5;
+  color: #005662;
+}
+
+.theme-calm-and-tranquil .card {
+  background-color: #cfeffd;
+  color: #005662;
+}
+
+.theme-calm-and-tranquil .text-primary {
+  color: #005662;
+}
+
+/* Energize & Uplift */
+.theme-energize-and-uplift {
+  background: linear-gradient(180deg, #ffe135, #ffba08);
+  color: #000000;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.theme-energize-and-uplift button {
+  background-color: #ffba08;
+  color: #000;
+}
+
+.theme-energize-and-uplift .card {
+  background-color: #ffe135;
+  color: #000;
+}
+
+.theme-energize-and-uplift .text-primary {
+  color: #000;
+}
+
+/* Soothing & Reflective */
+.theme-soothing-and-reflective {
+  background: linear-gradient(180deg, #f3e5f5, #e1bee7);
+  color: #5c6bc0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.theme-soothing-and-reflective button {
+  background-color: #e1bee7;
+  color: #5c6bc0;
+}
+
+.theme-soothing-and-reflective .card {
+  background-color: #f3e5f5;
+  color: #5c6bc0;
+}
+
+.theme-soothing-and-reflective .text-primary {
+  color: #5c6bc0;
+}
+
+/* Comfort & Warmth */
+.theme-comfort-and-warmth {
+  background: linear-gradient(180deg, #ffccbc, #ffab91);
+  color: #795548;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+.theme-comfort-and-warmth button {
+  background-color: #ffab91;
+  color: #795548;
+}
+
+.theme-comfort-and-warmth .card {
+  background-color: #ffccbc;
+  color: #795548;
+}
+
+.theme-comfort-and-warmth .text-primary {
+  color: #795548;
+}
+
+/* Focus & Clarity */
+.theme-focus-and-clarity {
+  background: linear-gradient(180deg, #e3f2fd, #bbdefb);
+  color: #0288d1;
+  font-family: 'Futura', sans-serif;
+}
+
+.theme-focus-and-clarity button {
+  background-color: #bbdefb;
+  color: #0288d1;
+}
+
+.theme-focus-and-clarity .card {
+  background-color: #e3f2fd;
+  color: #0288d1;
+}
+
+.theme-focus-and-clarity .text-primary {
+  color: #0288d1;
+}
+
+/* Inspiration & Motivation */
+.theme-inspiration-and-motivation {
+  background: linear-gradient(180deg, #ce93d8, #ab47bc);
+  color: #4a148c;
+  font-family: 'Impact', sans-serif;
+}
+
+.theme-inspiration-and-motivation button {
+  background-color: #ab47bc;
+  color: #4a148c;
+}
+
+.theme-inspiration-and-motivation .card {
+  background-color: #ce93d8;
+  color: #4a148c;
+}
+
+.theme-inspiration-and-motivation .text-primary {
+  color: #4a148c;
+}
+
+/* Hope & Optimism */
+.theme-hope-and-optimism {
+  background: linear-gradient(180deg, #fff9c4, #ffeb3b);
+  color: #388e3c;
+  font-family: 'Nunito', sans-serif;
+}
+
+.theme-hope-and-optimism button {
+  background-color: #ffeb3b;
+  color: #388e3c;
+}
+
+.theme-hope-and-optimism .card {
+  background-color: #fff9c4;
+  color: #388e3c;
+}
+
+.theme-hope-and-optimism .text-primary {
+  color: #388e3c;
+}
+
+/* Peace & Balance */
+.theme-peace-and-balance {
+  background: linear-gradient(180deg, #c8e6c9, #a5d6a7);
+  color: #2e7d32;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.theme-peace-and-balance button {
+  background-color: #a5d6a7;
+  color: #2e7d32;
+}
+
+.theme-peace-and-balance .card {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.theme-peace-and-balance .text-primary {
+  color: #2e7d32;
+}
+
+/* Joy & Playfulness */
+.theme-joy-and-playfulness {
+  background: linear-gradient(180deg, #ff80ab, #ff4081);
+  color: #ff4081;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.theme-joy-and-playfulness button {
+  background-color: #ff4081;
+  color: #fff;
+}
+
+.theme-joy-and-playfulness .card {
+  background-color: #ff80ab;
+  color: #fff;
+}
+
+.theme-joy-and-playfulness .text-primary {
+  color: #fff;
+}
+
+.theme-joy-and-creativity .hover:hover {
+  background-color: #fa4a88;
+  color: #6f0c3d;
+}
+
+.theme-joy-and-creativity .active {
+  background-color: #f2336f !important;
+  color: #5e0a32;
+}
+
+.theme-joy-and-creativity .input-container {
+  --input-bg-color: #333;
+  --input-text-color: #ff4081;
+  --icon-color: #ff80ab;
+}
+
+/* Calm & Tranquil */
+.theme-calm-and-tranquil .active {
+  background-color: #99cce6 !important;
+  color: #004c55;
+}
+
+/* Energize & Uplift */
+.theme-energize-and-uplift .active {
+  background-color: #ff9e00 !important;
+  color: #000000;
+}
+
+/* Soothing & Reflective */
+.theme-soothing-and-reflective .active {
+  background-color: #d1c4e9 !important;
+  color: #3f51b5;
+}
+
+/* Comfort & Warmth */
+.theme-comfort-and-warmth .active {
+  background-color: #ff8a65 !important;
+  color: #4e342e;
+}
+
+/* Focus & Clarity */
+.theme-focus-and-clarity .active {
+  background-color: #90caf9 !important;
+  color: #0277bd;
+}
+
+/* Inspiration & Motivation */
+.theme-inspiration-and-motivation .active {
+  background-color: #9c27b0 !important;
+  color: #4a148c;
+}
+
+/* Hope & Optimism */
+.theme-hope-and-optimism .active {
+  background-color: #fdd835 !important;
+  color: #388e3c;
+}
+
+/* Peace & Balance */
+.theme-peace-and-balance .active {
+  background-color: #81c784 !important;
+  color: #2e7d32;
+}
+
+/* Joy & Playfulness */
+.theme-joy-and-playfulness .active {
+  background-color: #f50057 !important;
+  color: #fff;
+}
+
